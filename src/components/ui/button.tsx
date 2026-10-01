@@ -10,7 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         header: "rounded-full bg-navy px-6 text-primary-foreground hover:bg-teal-deep",
-        coral: "h-12 rounded-full bg-coral pl-6 pr-2 text-primary-foreground font-bold shadow-md hover:bg-coral-deep",
+        coral:
+          "h-12 rounded-full bg-coral pl-6 pr-2 text-primary-foreground font-bold shadow-md hover:bg-coral-deep",
         teal: "rounded-full bg-teal-deep px-5 text-primary-foreground hover:bg-navy",
         default: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",

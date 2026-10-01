@@ -1,4 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { contactInfo } from "@/lib/content";
-export const Route=createFileRoute("/privacy")({head:()=>({meta:[{title:"Privacy Policy | Siri Career Consultancy"},{name:"description",content:"How Siri Career Consultancy handles information shared through enquiries and engagements."},{property:"og:title",content:"Privacy Policy | Siri Career Consultancy"},{property:"og:description",content:"Information collection, use, and data protection at Siri Career Consultancy."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary"}]}),component:Privacy});
-function Privacy(){return <main className="site-container max-w-4xl py-20"><p className="text-sm font-bold text-teal-deep">Legal</p><h1 className="mt-3 font-display text-4xl font-extrabold text-navy">Privacy Policy</h1><p className="mt-3 text-sm text-muted-foreground">Last updated: September 2026</p><div className="mt-12 space-y-10">{[["Information We Collect","We collect contact details and requirement information that banks and institutions share with us through enquiry forms, calls and emails."],["How We Use It","Information is used only to understand requirements, propose staffing and support solutions, and manage ongoing engagements."],["Data Protection","Client and customer data handled during engagements is kept confidential and processed as per the institution's own security guidelines."],["Contact",`For any privacy questions, reach us at ${contactInfo.email}.`]].map(([title,text])=><section key={title}><h2 className="font-display text-xl font-bold text-navy">{title}</h2><p className="mt-3 text-muted-foreground">{text}</p></section>)}</div></main>}
+export const Route = createFileRoute("/privacy")({
+  head: () => ({
+    meta: [
+      { title: "Privacy Policy | Siri Career Consultancy" },
+      {
+        name: "description",
+        content:
+          "How Siri Career Consultancy handles information shared through enquiries and engagements.",
+      },
+      { property: "og:title", content: "Privacy Policy | Siri Career Consultancy" },
+      {
+        property: "og:description",
+        content: "Information collection, use, and data protection at Siri Career Consultancy.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
+  component: Privacy,
+});
+function Privacy() {
+  return (
+    <main className="site-container max-w-4xl py-20">
+      <p className="text-sm font-bold text-teal-deep">Legal</p>
+      <h1 className="mt-3 font-display text-4xl font-extrabold text-navy">Privacy Policy</h1>
+      <p className="mt-3 text-sm text-muted-foreground">Last updated: September 2026</p>
+      <div className="mt-12 space-y-10">
+        {[
+          [
+            "Information We Collect",
+            "We collect contact details and requirement information that banks and institutions share with us through enquiry forms, calls and emails.",
+          ],
+          [
+            "How We Use It",
+            "Information is used only to understand requirements, propose staffing and support solutions, and manage ongoing engagements.",
+          ],
+          [
+            "Data Protection",
+            "Client and customer data handled during engagements is kept confidential and processed as per the institution's own security guidelines.",
+          ],
+          ["Contact", `For any privacy questions, reach us at ${contactInfo.email}.`],
+        ].map(([title, text]) => (
+          <section key={title}>
+            <h2 className="font-display text-xl font-bold text-navy">{title}</h2>
+            <p className="mt-3 text-muted-foreground">{text}</p>
+          </section>
+        ))}
+      </div>
+    </main>
+  );
+}
