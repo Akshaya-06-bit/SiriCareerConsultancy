@@ -1,29 +1,65 @@
-# Welcome to your Lovable project
+# Siri Career Consultancy
 
-This project was built with [Lovable](https://lovable.dev).
+A professional website for **Siri Career Consultancy**, a loan recovery agency providing telecalling, staffing, lead generation, documentation processing, field verification, and customer support services.
 
-## Build with Lovable
+## 🌐 About
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Siri Career Consultancy provides trained teams and operational support for banks, NBFCs, and financial institutions.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+The website is designed to provide:
 
-## Development
+- Company information
+- Service details
+- Partner/institution information
+- Contact details
+- WhatsApp-based customer communication
+- Professional and responsive design
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## ✨ Features
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+- 🏢 Professional corporate website
+- 📞 Direct phone contact
+- 💬 WhatsApp contact integration
+- 📧 Email contact
+- 📍 Business location and working hours
+- 💼 Loan recovery services
+- 👥 Telecalling and staffing services
+- 📋 Documentation processing
+- 🔍 Field verification
+- 🤝 Customer support operations
+- 📱 Fully responsive design
+- 🏦 Bajaj Finance branding in the partner section
 
-## Built with
+## 🛠️ Tech Stack
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Lucide React**
+- **JavaScript / TypeScript**
+- **Git & GitHub**
+- **Vercel**
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── Site.tsx
+│   └── BajajFinanceLogo.tsx
+│
+├── lib/
+│   └── content.ts
+│
+├── routes/
+│   ├── index.tsx
+│   ├── about.tsx
+│   ├── services.tsx
+│   ├── how-it-works.tsx
+│   ├── partners.tsx
+│   ├── contact.tsx
+│   ├── privacy.tsx
+│   └── terms.tsx
+│
+└── ...
