@@ -1,0 +1,4 @@
+- [x] Recreate the reference home page, navigation, supporting pages, and footer with Siri Career Consultancy branding.
+- [x] Implement responsive interactions and validated contact form without invented contact details.
+- [ ] Connect enquiry delivery and confirm success once Siri Career Consultancy provides a real destination address.
+- [x] Compare desktop and mobile rendering against the reference and verify navigation/form states.

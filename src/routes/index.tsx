@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Hero, TrustSection, ServicesSection, WhyChoose, ProcessSection, ContactCTA } from "@/components/Site";
+export const Route = createFileRoute("/")({head:()=>({meta:[{title:"Siri Career Consultancy"},{name:"description",content:"Siri Career Consultancy provides telecalling teams, staffing, lead generation and back-office support services to banks and financial institutions."},{property:"og:title",content:"Siri Career Consultancy"},{property:"og:description",content:"Trained telecallers, verified staff and managed operations for banks and financial institutions."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Index});
+function Index(){return <main><Hero/><div className="h-6"/><TrustSection/><ServicesSection/><WhyChoose/><ProcessSection/><ContactCTA/></main>}
