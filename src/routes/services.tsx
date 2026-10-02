@@ -1,7 +1,105 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { InnerHero, TrustSection, SectionHeading, ServicesGrid, ProcessSection, WhyChoose, telecallers } from "@/components/Site";
+import {
+  InnerHero,
+  TrustSection,
+  SectionHeading,
+  ServicesGrid,
+  ProcessSection,
+  WhyChoose,
+} from "@/components/Site";
+import telecallers from "@/assets/telecallers.jpg";
 import { services } from "@/lib/content";
 import { Button } from "@/components/ui/button";
-export const Route=createFileRoute("/services")({head:()=>({meta:[{title:"Our Services | Siri Career Consultancy"},{name:"description",content:"Explore telecalling, bank staffing, lead generation, documentation, field verification and customer support services."},{property:"og:title",content:"Our Services | Siri Career Consultancy"},{property:"og:description",content:"End-to-end staffing and support services for banks and financial institutions."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Services});
-function Services(){return <main><InnerHero parent="Services" title="Our Services" description="End-to-end staffing and support services for banks, NBFCs and financial institutions — telecallers, staffing, lead generation and back-office operations." image={telecallers} alt="Professional telecalling team at work"/><div className="site-container py-12"><h2 className="font-display text-2xl font-bold text-navy">Institutions We Serve</h2><p className="mt-2 text-muted-foreground">Banks and financial institutions that rely on our teams.</p></div><TrustSection heading="Trained Teams for Your Bank"/><section className="section-space"><div className="site-container"><SectionHeading eyebrow="What We Offer" title="Our Services for Banks" description="We provide trained people and managed operations across telecalling, staffing, lead generation and back-office support."/><ServicesGrid detailed/></div></section><ProcessSection eyebrow="Our Process" description="A simple and transparent process that takes your requirement from brief to a fully managed team."/><section className="surface-sky section-space"><div className="site-container"><SectionHeading eyebrow="More Support" title="Everything Else We Handle for You" description="Beyond staffing, our team supports you through documentation, verification and continuous operations."/><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">{services.map(({title,description})=><div key={title}><h3 className="font-display font-bold text-navy">{title}</h3><p className="mt-2 text-sm text-muted-foreground">{description}</p></div>)}</div></div></section><WhyChoose eyebrow="Why Choose Us" title="A Dedicated Team Behind Your Operations" description="Our professional team is always ready to recruit, train and manage the people your institution needs — with clear reporting at every step."/><section className="section-space text-center"><div className="site-container"><h2 className="font-display text-3xl font-extrabold text-navy">Ready to Build Your Team?</h2><p className="mx-auto mt-3 max-w-xl text-muted-foreground">Tell us your requirement and our experts will propose the right team and process for your institution.</p><Button asChild variant="teal" className="mt-7"><Link to="/contact">Talk to an Expert <ArrowRight/></Link></Button></div></section></main>}
+export const Route = createFileRoute("/services")({
+  head: () => ({
+    meta: [
+      { title: "Our Services | Siri Career Consultancy" },
+      {
+        name: "description",
+        content:
+          "Explore telecalling, bank staffing, lead generation, documentation, field verification and customer support services.",
+      },
+      { property: "og:title", content: "Our Services | Siri Career Consultancy" },
+      {
+        property: "og:description",
+        content: "End-to-end staffing and support services for banks and financial institutions.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Services,
+});
+function Services() {
+  return (
+    <main>
+      <InnerHero
+        parent="Services"
+        title="Our Services"
+        description="End-to-end staffing and support services for banks, NBFCs and financial institutions — telecallers, staffing, lead generation and back-office operations."
+        image={telecallers}
+        alt="Professional telecalling team at work"
+      />
+      <div className="site-container py-12">
+        <h2 className="font-display text-2xl font-bold text-navy">Institutions We Serve</h2>
+        <p className="mt-2 text-muted-foreground">
+          Banks and financial institutions that rely on our teams.
+        </p>
+      </div>
+      <TrustSection heading="Trained Teams for Your Bank" />
+      <section className="section-space">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow="What We Offer"
+            title="Our Services for Banks"
+            description="We provide trained people and managed operations across telecalling, staffing, lead generation and back-office support."
+          />
+          <ServicesGrid detailed />
+        </div>
+      </section>
+      <ProcessSection
+        eyebrow="Our Process"
+        description="A simple and transparent process that takes your requirement from brief to a fully managed team."
+      />
+      <section className="surface-sky section-space">
+        <div className="site-container">
+          <SectionHeading
+            eyebrow="More Support"
+            title="Everything Else We Handle for You"
+            description="Beyond staffing, our team supports you through documentation, verification and continuous operations."
+          />
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {services.map(({ title, description }) => (
+              <div key={title}>
+                <h3 className="font-display font-bold text-navy">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <WhyChoose
+        eyebrow="Why Choose Us"
+        title="A Dedicated Team Behind Your Operations"
+        description="Our professional team is always ready to recruit, train and manage the people your institution needs — with clear reporting at every step."
+      />
+      <section className="section-space text-center">
+        <div className="site-container">
+          <h2 className="font-display text-3xl font-extrabold text-navy">
+            Ready to Build Your Team?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
+            Tell us your requirement and our experts will propose the right team and process for
+            your institution.
+          </p>
+          <Button asChild variant="teal" className="mt-7">
+            <Link to="/contact">
+              Talk to an Expert <ArrowRight />
+            </Link>
+          </Button>
+        </div>
+      </section>
+    </main>
+  );
+}
