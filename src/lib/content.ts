@@ -14,7 +14,7 @@ import {
 export const company = "Siri Career Consultancy";
 export const contactInfo = {
   phone: "8919508969",
-  email: "siricareercoonsultants@gmail.com",
+  email: "siricareerconsultants@gmail.com",
   address: "H.No. 27-117/1, Main Bazar, Near Church Road, Miryalguda, Nalgonda, 508207",
   hours: "9:30 AM - 5:30 PM",
 };
